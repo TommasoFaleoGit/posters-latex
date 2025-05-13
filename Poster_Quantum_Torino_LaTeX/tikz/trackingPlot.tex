@@ -1,0 +1,65 @@
+\begin{tikzpicture}
+  \begin{axis}[width=18cm, height=10.5cm,
+    xtick={0,0.1,...,1},
+    xmin=0, xmax=1, ymin=-0.1, ymax=1.1,
+    xlabel={z / Crystal Length},
+    ylabel={E-Field},
+    legend entries={Real Part, Imaginary Part},
+    legend pos=north west,
+    legend style={cells={anchor=west}},
+    axis background/.style={fill=uibkGray},
+    filter discard warning=false, unbounded coords=discard,
+    axis on top]
+
+    % Domains
+    % \addplot[const plot, line width=0pt, fill=uibkGray, forget plot]
+    % table[header=false, x expr=\thisrowno{1}/1e3, y expr=7450+\thisrowno{0}*250., col sep=comma]
+    % {data/Frick-coherenceLength_10.75_domains.csv};
+
+    % \addplot[white, line width=.2cm] table[header=false, x expr=\thisrowno{0}/1e3, y index=3,
+    % col sep=comma] {data/gaussianExample_fields.csv};
+    \fill[uibkBlack] (rel axis cs: 0.000,0.000) rectangle (rel axis cs: 0.050,1.000);
+    \fill[uibkBlack] (rel axis cs: 1.000,0.000) rectangle (rel axis cs: 0.950,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.100,0.000) rectangle (rel axis cs: 0.150,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.900,0.000) rectangle (rel axis cs: 0.850,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.180,0.000) rectangle (rel axis cs: 0.210,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.820,0.000) rectangle (rel axis cs: 0.790,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.240,0.000) rectangle (rel axis cs: 0.270,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.760,0.000) rectangle (rel axis cs: 0.730,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.290,0.000) rectangle (rel axis cs: 0.310,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.710,0.000) rectangle (rel axis cs: 0.690,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.330,0.000) rectangle (rel axis cs: 0.350,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.670,0.000) rectangle (rel axis cs: 0.650,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.360,0.000) rectangle (rel axis cs: 0.370,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.640,0.000) rectangle (rel axis cs: 0.630,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.380,0.000) rectangle (rel axis cs: 0.390,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.620,0.000) rectangle (rel axis cs: 0.610,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.400,0.000) rectangle (rel axis cs: 0.410,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.600,0.000) rectangle (rel axis cs: 0.590,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.415,0.000) rectangle (rel axis cs: 0.420,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.585,0.000) rectangle (rel axis cs: 0.580,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.425,0.000) rectangle (rel axis cs: 0.430,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.575,0.000) rectangle (rel axis cs: 0.570,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.435,0.000) rectangle (rel axis cs: 0.440,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.565,0.000) rectangle (rel axis cs: 0.560,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.443,0.000) rectangle (rel axis cs: 0.446,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.557,0.000) rectangle (rel axis cs: 0.554,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.449,0.000) rectangle (rel axis cs: 0.452,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.551,0.000) rectangle (rel axis cs: 0.548,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.453,0.000) rectangle (rel axis cs: 0.454,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.547,0.000) rectangle (rel axis cs: 0.546,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.455,0.000) rectangle (rel axis cs: 0.456,1.000);
+    \fill[uibkBlack] (rel axis cs: 0.545,0.000) rectangle (rel axis cs: 0.544,1.000);
+    \fill[uibkBlack!50!uibkGray] (rel axis cs: 0.457,0.000) rectangle (rel axis cs: 0.543,1.000);
+
+    \addplot[uibkBlue, line width=.1cm] table[header=false, x expr=\thisrowno{0}/30e3,
+    y expr=\thisrowno{1}/1.1424e4, col sep=comma] {data/gaussianExample_fields_1000.csv};
+    \addplot[uibkOrange, line width=.1cm] table[header=false, x expr=\thisrowno{0}/30e3,
+    y expr=\thisrowno{2}/1.1424e4, col sep=comma] {data/gaussianExample_fields_1000.csv};
+
+    \end{axis}
+\end{tikzpicture}
+%%% Local Variables:
+%%% mode: LaTeX
+%%% TeX-master: "../poster"
+%%% End:
