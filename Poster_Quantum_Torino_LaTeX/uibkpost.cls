@@ -221,8 +221,8 @@
   },
   block/.style={
     superblock,
-    text width = (0.4615*\pagewidth-0.5\hSpace-\blockcontentSize),
-    minimum width = (0.4615*\pagewidth-0.5\hSpace)
+    text width = (0.465*\pagewidth-0.5\hSpace-\blockcontentSize),
+    minimum width = (0.465*\pagewidth-0.5\hSpace)
   },
   blockcontent/.style={
     font=\fontsize{\blockcontentSize}{\blockcontentSize}\color{blockcontenttext\UIBK@color}\selectfont,
