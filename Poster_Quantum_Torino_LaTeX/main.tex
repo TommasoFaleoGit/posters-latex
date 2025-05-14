@@ -96,13 +96,14 @@
     \maketitle
 
     \abstract{
-    Photonic quantum technologies rely on many-photon interference, necessitating the efficient generation of indistinguishable photons. Exceptional achievements have been obtained by nonlinear domain engineering of spontaneous parametric down-conversion (SPDC) sources, with theoretical spectral purity up to 98.7\% and measured two-photon interference visibilities as high as 98.6(1.1)\% with loose spectral filtering [1]. 
+    Photonic quantum technologies rely on many-photon interference, necessitating the efficient generation of indistinguishable photons. Exceptional achievements have been obtained by nonlinear domain engineering of spontaneous parametric down-conversion (SPDC) sources, with theoretical spectral purity up to 98.7\% and measured two-photon interference visibilities of 95.3(0.1)\% without spectral filtering, and as high as 98.6(1.1)\% with loose spectral filtering [1]. 
     Here, we further optimise the purity of the down-conversion process by combining domain engineering and pump spectral shaping via a spatial light modulator (SLM) in a 4$f$ pulse shaper. This approach provides both a Gaussian phase matching function (PMF) and a Gaussian pump envelope function (PEF), enabling us to attain a measured spectral purity of 99.92(1)\% and a two-photon interference visibility of 98.5(1.5)\% without the necessity for spectral filtering.
     }
 
     \block{l}{Hong-Ou-Mandel interference and indistinguishability}{
         The lack of direct photon interaction is compensated for by exploiting two-particle interference: the so-called Hong-Ou-Mandel (HOM) effect [2].
-        When two indistinguishable photons enter the input ports of a 50:50 beam splitter, HOM interference manifests in the suppression of the measured coincidence events. High visibility of this interference depends on achieving high indistinguishability in all internal degrees of freedom, including relative delay (see figure below), polarisation, and frequency.\\[0.25cm]
+        %When two indistinguishable photons enter the input ports of a 50:50 beam splitter, HOM interference manifests in the suppression of the measured coincidence events.
+        High visibility of this interference depends on achieving high indistinguishability in all internal degrees of freedom, including relative delay (see figure below), polarisation, and frequency.\\[0.25cm]
         \raisebox{4ex}{
         \begin{minipage}[b]{0.45\textwidth}
             \begin{center}
@@ -119,7 +120,7 @@
     \block{r}{Domain engineering}{
         The phase-matching condition is satisfied by periodically poling the nonlinear crystal with alternating ferroelectric domains.
         This leads to sinc-shaped PMFs and spectrally correlated photons.
-        Engineering the domain poling to track the field allows achieving a Gaussian PMF and suppressing correlations.\\[0.3cm]
+        Engineering the domain poling to track the field allows achieving a Gaussian PMF and suppressing correlations [4].\\[0.3cm]
         \raisebox{0ex}{
         \begin{minipage}[b]{0.4\textwidth}
             \centering
@@ -136,55 +137,68 @@
     }
     
     \block{l}{Pump spectral shaping}{
+        The Gaussian PEF is obtained by mapping each wavelength into a different position at the Fourier plane of a 4$f$ setting, and by individually modulating their amplitude using an SLM and a polarizer [4].\\[.25cm]
         \begin{center}
-            \includegraphics[width=.9\textwidth]{pics/PulseShaper_breadboard.png}
+            \includegraphics[width=.92\textwidth]{pics/PulseShaper_breadboard_whiteText_edit.png}
         \end{center}
     }
 
     \block{l}{Joint Spectral Amplitude (JSA)}{
         The bi-photon wave function $\ket{\psi}_{s,i}=\iint \mathrm{d}\omega_s \mathrm{d}\omega_i f(\omega_s,\omega_i) \hat{a}^{\dagger}_s(\omega_s)\hat{a}^{\dagger}_i(\omega_i)\ket{0}$ depends on the JSA $f(\omega_s,\omega_i)=\phi(\omega_s,\omega_i)\alpha(\omega_s+\omega_i)$. This directly relates to energy and momentum conservation:\\[0.25cm]
         \begin{itemize}
-            \item energy conservation $\Rightarrow$ Pump envelope function $\alpha(\omega_p)=\alpha(\omega_s + \omega_i)$
-            \item momentum conservation $\Rightarrow$ Phase-matching function $\phi(\omega_s, \omega_i)=\int \chi^{(2)}(z)e^{i\Delta k(\omega_i,\omega_s)z}\mathrm{d}z$
+            \item energy conservation $\Rightarrow$ PEF: $\alpha(\omega_p)=\alpha(\omega_s + \omega_i)$
+            \item momentum conservation $\Rightarrow$ PMF: $\phi(\omega_s, \omega_i)=\int \chi^{(2)}(z)e^{i\Delta k(\omega_i,\omega_s)z}\mathrm{d}z$
         \end{itemize}
-        \phantom{space}\\[0.2cm]
-        \textbf{JSA of a periodically-poled crystal and  Gaussian envelope function:}\\[0.25cm]
+        \phantom{space}\\[0.1cm]
+        \textbf{JSA of a periodically-poled crystal and  Gaussian envelope function}\\[0.25cm]
         {\centering
         \includegraphics[width=\textwidth]{pics/JSA_ppKTP.pdf}}
         \phantom{space}\\
-        \textbf{JSA using a Gaussian phase-matching function and Gaussian envelope function:}\\ [0.25cm]
+        \textbf{JSA using a Gaussian phase-matching function and Gaussian envelope function}\\ [0.25cm]
         {\centering
         \includegraphics[width=\textwidth]{pics/JSA_aKTP.pdf}}
 
-        Optimal purity is only possible when both the phase-matching function and the pump envelope function are Gaussian with equal width $\sigma$ [3]. This requires simultaneous engineering of the poling of the nonlinear material [4] and spectral shaping of the pump laser:
+        $\Rightarrow$ Optimal purity is only achievable when both the PMF and the PEF are Gaussians with a spectral width appropriate to suppress all spectral correlations [5].
         
     }
 
     \block{r}{Experimental setup and results}{
     {\centering
-    \includegraphics[width=0.96\textwidth]{pics/Setup_PureSources_v3.png}}\\[0.25cm]
+    \includegraphics[width=0.98\textwidth]{pics/Setup_PureSources_v3.png}}\\[0.25cm]
     
     % Example pump spectral shaping
-    \textbf{Pump spectral shaping}\\[0.25cm]
+    \textbf{Crystal nonlinearity} \hspace{6cm} \textbf{Pump spectral shaping}\\[0.25cm]
     %The laser is spectrally shaped via an SLM at the Fourier plane of a 4$f$ pulse shaper and pumps two domain-engineered potassium titanyl phosphate (aKTP) crystals. Two down-converted photons are interfered in a heralded four-photon HOM setup and detected with superconductive nanowire single-photon detectors (SNSPDs).
-    {\centering
-        \includegraphics[width=0.3\textwidth]{pics/MiraOutput_intensity.png}}
+    \raisebox{3ex}{
+        \begin{minipage}[b]{0.34\textwidth}
+            {\centering
+            \includegraphics[width=\textwidth]{pics/nonlinearityPlotSubCohLength.pdf}}
+        \end{minipage}
+        }
+    \begin{minipage}[b]{0.66\textwidth}
         {\centering
-        \includegraphics[width=0.34\textwidth]{pics/MiraOutput_intensity_idealGauss.png}}
+        \includegraphics[width=0.51\textwidth]{pics/MiraOutput_intensity_idealGauss.png}}
     {\centering
-        \includegraphics[width=0.3\textwidth]{pics/775.00nm-fwhm0.7411nm-r2_0.9996_intensity.png}}
-    \phantom{space}\\[0.2cm]
+        \includegraphics[width=0.45\textwidth]{pics/775.00nm-fwhm0.7411nm-r2_0.9996_intensity.png}}
+    \end{minipage}
+    %{\centering
+    %    \includegraphics[width=0.34\textwidth]{pics/nonlinearityPlotSubCohLength.pdf}}
+    %    {\centering
+    %    \includegraphics[width=0.34\textwidth]{pics/MiraOutput_intensity_idealGauss.png}}
+    %{\centering
+    %    \includegraphics[width=0.3\textwidth]{pics/775.00nm-fwhm0.7411nm-r2_0.9996_intensity.png}}
+    \phantom{space}\\
 
     % Measurements JSA and HOM
-    \textbf{JSA reconstruction and HOM dip measurements}\\[0.25cm]
+    \textbf{JSA reconstruction} \hspace{11.5cm} \textbf{HOM dip measurements}\\[0.25cm]
     % JSA measurement
-    \includegraphics[width=0.37\textwidth]{pics/Purity99.82_normJSA.png}
-    $\qquad \qquad$
+    \includegraphics[width=0.375\textwidth]{pics/singleJSA_2_P99.9003_edit.png}
+    \hspace{6cm}
     % HOM measurement
-     \includegraphics[width=0.41\textwidth]{pics/coincidences_noLabel.png}
-     \phantom{space}\\[0.2cm]
+    \includegraphics[width=0.41\textwidth]{pics/coincidences_noLabel.png}
+    %\phantom{space}\\
     \begin{itemize}
-        \item Spectral purity (via singular value decomposition [4]) $\mathbf{P=99.92(1)\%}$
+        \item Spectral purity (via time-of-flight spectrometry [6]) $\mathbf{P=99.92(1)\%}$
         \item HOM dip visibility $\mathbf{V_{fit}=98.5(1.5)\%}$ 
     \end{itemize}     
      
@@ -197,10 +211,10 @@
     %\LARGE
     \textbf{[1]} A. Pickston et al., Opt. Express \textbf{29}, 6991-7002 (2021);
     \textbf{[2]} C. K. Hong et al., Phys. Rev. Lett. \textbf{59}, 2044 (1987);
-    \textbf{[3]} N. Quesada et al., Phys. Rev. A \textbf{98}, 043813 (2018);
-    \textbf{[4]} J-L. Tambasco et al., Opt. Express \textbf{24}, 19616-19626 (2016);
-    \textbf{[5]} M. Avenhaus et al., Opt. Lett. \textbf{34}, 2873-2875 (2009);
-    \textbf{[6]} P. J. Mosley et al., Phys. Rev. Lett. \textbf{100}, 133601 (2008).
+    \textbf{[3]} J-L. Tambasco et al., Opt. Express \textbf{24}, 19616-19626 (2016);
+    \textbf{[4]} A. M. Weiner, Opt. Commun. \textbf{284}, 3669-3680 (2011);
+    \textbf{[5]} N. Quesada et al., Phys. Rev. A \textbf{98}, 043813 (2018);
+    \textbf{[6]} M. Avenhaus et al., Opt. Lett. \textbf{34}, 2873-2875 (2009).
     }
  
 
