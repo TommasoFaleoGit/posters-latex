@@ -118,13 +118,6 @@
             \end{center}
         \end{minipage}    
     }
-    
-    %\block{l}{Pump spectral shaping}{
-    %    The Gaussian PEF is obtained by mapping each wavelength into a different position at the Fourier plane of a 4$f$ setting, and by individually modulating their amplitude using an SLM and a polarizer [4].\\[.25cm]
-    %    \begin{center}
-    %        \includegraphics[width=.92\textwidth]{pics/PulseShaper_breadboard_whiteText_edit.png}
-    %    \end{center}
-    %}
 
     \block{r}{Joint Spectral Amplitude (JSA) optimisation}{
         The bi-photon wave function $\ket{\psi}_{s,i}=\iint \mathrm{d}\omega_s \mathrm{d}\omega_i f(\omega_s,\omega_i) \hat{a}^{\dagger}_s(\omega_s)\hat{a}^{\dagger}_i(\omega_i)\ket{0}$ depends on the JSA $f(\omega_s,\omega_i)=\phi(\omega_s,\omega_i)\alpha(\omega_s+\omega_i)$. This directly relates to energy and momentum conservation:\\[0.25cm]
@@ -133,14 +126,6 @@
             \item momentum conservation $\Rightarrow$ Phase-Matching Function (PMF): $\phi(\omega_s, \omega_i)=\int \chi^{(2)}(z)e^{i\Delta k(\omega_i,\omega_s)z}\mathrm{d}z$
         \end{itemize}
         \vspace{0.5cm}
-        %\phantom{space}\\[0.05cm]
-        %\textbf{JSA of a periodically-poled crystal and  Gaussian envelope function}\\[0.25cm]
-        %{\centering
-        %\includegraphics[width=\textwidth]{pics/JSA_ppKTP.pdf}}
-        %\phantom{space}\\
-        %\textbf{JSA using a Gaussian phase-matching function and Gaussian envelope function}\\ [0.25cm]
-        %{\centering
-        %\includegraphics[width=\textwidth]{pics/JSA_aKTP.pdf}}
         \begin{minipage}[b]{0.5\textwidth}
             {\centering
             \includegraphics[width=\textwidth]{pics/Purity_v8_labels.pdf}}
@@ -192,23 +177,6 @@
     \block{r}{Experimental setup and results}{
     {\centering
     \includegraphics[width=\textwidth]{pics/Setup_PureSources_v7.png}}\\[0.25cm]
-    
-    % Example pump spectral shaping
-    %\textbf{Crystal nonlinearity} \hspace{6cm} \textbf{Pump spectral shaping}\\[0.25cm]
-    %The laser is spectrally shaped via an SLM at the Fourier plane of a 4$f$ pulse shaper and pumps two domain-engineered potassium titanyl phosphate (aKTP) crystals. Two down-converted photons are interfered in a heralded four-photon HOM setup and detected with superconductive nanowire single-photon detectors (SNSPDs).
-    %\raisebox{3ex}{
-    %    \begin{minipage}[b]{0.34\textwidth}
-    %        {\centering
-    %        \includegraphics[width=\textwidth]{pics/nonlinearityPlotSubCohLength.pdf}}
-    %    \end{minipage}
-    %    }
-    %\begin{minipage}[b]{0.66\textwidth}
-    %    {\centering
-    %    \includegraphics[width=0.51\textwidth]{pics/MiraOutput_intensity_idealGauss.png}}
-    %{\centering
-    %    \includegraphics[width=0.45\textwidth]{pics/775.00nm-fwhm0.7411nm-r2_0.9996_intensity.png}}
-    %\end{minipage}
-    %\phantom{space}\\
 
     % Measurements JSA and HOM
     \textbf{JSA reconstruction} \hspace{11.5cm} \textbf{HOM dip measurements}\\[0.25cm]
