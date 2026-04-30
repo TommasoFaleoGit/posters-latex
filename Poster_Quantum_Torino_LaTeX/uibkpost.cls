@@ -234,10 +234,10 @@
 
 % define logos if they are enabled in UIBK style
 % first relax all logos
-%\def \logoB {_images/qrcode_arxiv.png}
-%\def \posLogoB {($(current page.north east)+(-3.5cm,-7.5cm)$)}
-%\def \anchorLogoB {east}
-%\def \heightLogoB {6cm}
+\def \logoB {_images/qr_code_arxiv.png}
+\def \posLogoB {($(current page.north east)+(-2.0cm,-10.5cm)$)}
+\def \anchorLogoB {east}
+\def \heightLogoB {8cm}
 
 
 
